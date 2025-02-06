@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evo Team</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+        }
+        .about {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<video class="video-background" autoplay loop muted playsinline>
+    <source src="videos/black-hole.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+</video>
+<header>
+    <h1>Evo Team</h1>
+    <button class="button" onclick="showMessage('Кнопка 1 нажата')">Кнопка 1</button>
+    <button class="button" onclick="showMessage('Кнопка 2 нажата')">Кнопка 2</button>
+    <button class="button" onclick="showMessage('Кнопка 3 нажата')">Кнопка 3</button>
+</header>
+<div class="about" id="about">
+    <h2>О нас</h2>
+    <p>Мы - команда Evo Team, создающая уникальные решения в сфере Нейросетей. Наша цель - предоставить наилучший опыт работы с Нейростеями. Присоединяйтесь к нам в нашем увлекательном путешествии!</p>
+</div>
+<script>
+    function showMessage(message) {
+        alert(message);
+    }
+</script>
+</body>
+</html>
